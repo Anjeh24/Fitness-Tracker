@@ -9,7 +9,9 @@ const workoutSchema = new Schema({
     default: Date.now
   },
 
-     type: {
+   exercise:[
+   {
+   type: {
     type: String,
     trim: true,
     required: "Enter type of fitness routine"
@@ -35,6 +37,8 @@ const workoutSchema = new Schema({
     type: Number,
     required: "Enter the number of sets"
   }
+}
+]
 });
 
 const workout = mongoose.model("workout", workoutSchema);
