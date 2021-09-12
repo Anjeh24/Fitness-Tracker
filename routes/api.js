@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const fitness = require("../models/fitness.js");
+const db = require("../models");
+require('mongoose')
 //const Transaction = require("../models/fitness.js");
 
 router.post("/api/fitness", ({ body }, res) => {
