@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const workout = require("../models/workout");
-const db = require("../models/workout");
+const workout = require("../Models/workout");
+const db = require("../Models/workout");
 require('mongoose')
 //const Transaction = require("../models/fitness.js");
 
 // route for getting all exercises/ workouts
-router.get("/api/workout", (req, res) => {
+router.get("/api/workouts", (req, res) => {
 	db.find()
 		.then((dbData) => {
 			res.json(dbData);
@@ -15,7 +15,7 @@ router.get("/api/workout", (req, res) => {
 		});
 });
 
-router.get("/api/workout/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
 	db.find()
 		.then((dbData) => {
 			res.json(dbData);
@@ -25,7 +25,7 @@ router.get("/api/workout/range", (req, res) => {
 		});
 });
 
-router.post("/api/workout", ({ body }, res) => {
+router.post("/api/workouts", ({ body }, res) => {
 	db.create(body)
 		.then((dbData) => {
 			res.json(dbData);
@@ -36,7 +36,7 @@ router.post("/api/workout", ({ body }, res) => {
 });
 
 //Route to update workout
-router.put("/api/workout/:id", ({ body, params }, res) => {
+router.put("/api/workouts/:id", ({ body, params }, res) => {
 	db.findByIdAndUpdate(params.id, { $push: { exercises: body } })
 		.then((dbData) => {
 			res.json(dbData);
