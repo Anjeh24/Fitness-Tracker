@@ -7,6 +7,8 @@ This Application is designed for anyone into health and fitness. It is designed 
 Technologies used are MongoDB for the database.
 To test the functionality, run npm install, to install the dependencies, and npm run seed to feed the database with Mongodb running. Then, run the server to have a peek.
 
+Link to deployed App on Heroku: https://murmuring-inlet-53682.herokuapp.com/
+
 Snap shot of the app:
 
 ![image](https://user-images.githubusercontent.com/82301113/133481901-20c79cfa-323e-4401-93e7-149f715a58ff.png)
